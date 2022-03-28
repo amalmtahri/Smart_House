@@ -1,0 +1,24 @@
+ul{
+    color: black;
+}
+
+.nav-link{
+    color: rgb(27, 26, 26);
+    margin-left: 70px;
+}
+.nav-link:hover{
+    color: #0084E9;
+}
+.active{
+    color: #0084E9;
+    font-weight: bold;
+}
+input{
+    background-color: #0084E9;
+    border-color: #0084E9;
+    color: white;
+    border-radius: 50px;
+}
+::placeholder{
+    color: white;
+}
