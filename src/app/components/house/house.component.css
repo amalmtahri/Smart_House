@@ -1,0 +1,79 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+input{
+    background-color: #0084E9;
+    border-color: #0084E9;
+    color: white;
+    border-radius: 50px;
+}
+::placeholder{
+    color: white;
+}
+ul{
+    color: black;
+}
+
+.nav-link{
+    color: rgb(27, 26, 26);
+    margin-left: 70px;
+}
+.nav-link:hover{
+    color: #0084E9;
+}
+.active{
+    color: #0084E9;
+    font-weight: bold;
+}
+
+h6{
+    color: #FF4147;
+}
+.card{
+    background-color: #F6F6F6;
+    margin-bottom: 20px;
+}
+.smarthome{
+    margin: 50px;
+}
+.btn-start{
+    background-color: #0084E9;
+    width: 80px;
+    height: 80px;
+    color: white;
+    font-size: 40px;
+    margin-top: 40px;
+}
+.btn-start:hover{
+background-color: #0492ff;
+}
+
+.btn-delete{
+    background-color: #FF3F5B;
+    width: 60px;
+    height: 60px;
+    color: white;
+    font-size: 20px;
+}
+.btn-delete:hover{
+    background-color: #ff6179;
+}
+.btn-off{
+    background-color: #FF3F5B;
+    width: 80px;
+    height: 80px;
+    color: white;
+    font-size: 40px;
+    margin-top: 40px;
+}
+.btn-new {
+    background-color: #0084E9;
+    width: 70px;
+    height: 50px;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.btn-new:hover{
+    background-color: #0492ff;
+}
