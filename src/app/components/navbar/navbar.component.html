@@ -1,15 +1,18 @@
-<nav class="navbar navbar-light bg-white">
+<nav class="navbar mx-4 navbar-light bg-white">
     <div class="container-fluid">
       <a class="navbar-brand"><img src="../../../assets/img/1.png" width="110px" alt=""></a>
       <div class=" d-flex">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">About</a>
-        <a class="nav-link " href="#">Smart home</a>
-        <a class="nav-link " href="#">Sign in</a>
+        <a class="nav-link " aria-current="page" routerLink="" routerLinkActive="active">Home</a>
+        <a class="nav-link" href="#" routerLinkActive="active">About</a>
+        <a class="nav-link " href="#"  routerLink="smarthouse" routerLinkActive="active">Smart home</a>
       </div>
       <form class="d-flex">
-        <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
+        <a class="nav-link login" href="#" routerLink="login" routerLinkActive="active">Sign in</a>
+        <button class="btn shadow btn-register">Register</button>
+        <!-- <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search"> -->
         <!-- <button class="btn" type="submit"><i class="bi bi-search"></i></button> -->
       </form>
     </div>
 </nav>
+<router-outlet></router-outlet>
+

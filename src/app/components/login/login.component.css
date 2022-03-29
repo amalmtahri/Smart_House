@@ -1,0 +1,57 @@
+p{
+    color: black;
+}
+.img-login{
+    padding-top: 50px;
+}
+.register{
+    color: #0084E9;
+}
+.ctn{
+    margin-top: 70px;
+}
+input{
+    background-color: #e0edfc;
+    border:none;
+    border-radius: 7px;
+    width: 270px;
+    height: 37px;
+    margin-bottom: 10px;
+}
+::placeholder{
+    color: #51575C;
+    font-size: 12px;
+    font-weight:500;
+    padding-left: 5px;
+}
+.formule{
+    margin-top: 100px;
+}
+.pswrd{
+    font-size: 12px;
+    color: #9fa2a5;
+}
+.sign-in{
+    width: 270px;
+    background-color: #0084E9;
+    color: white;
+    margin-top: 50px;
+}
+.sign-in:hover{
+    background-color: #3ea5f3;
+}
+.continue{
+    font-size: 12px;
+    color: #9fa2a5;
+    padding-left: 50px;
+}
+.icon{
+    background: none;
+    border: 1px solid #e5ebf1;
+    width: 70px !important;
+    margin-right: 10px;
+}
+.icon:hover{
+    background-color: #0084E9;
+    color: white;
+}

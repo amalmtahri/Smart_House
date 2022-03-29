@@ -4,7 +4,7 @@ ul{
 
 .nav-link{
     color: rgb(27, 26, 26);
-    margin-left: 70px;
+    margin-left: 60px;
 }
 .nav-link:hover{
     color: #0084E9;
@@ -21,4 +21,18 @@ input{
 }
 ::placeholder{
     color: white;
+}
+.btn-register{
+    background-color: white;
+    color: #0084E9;
+    border-radius: 30px;
+    width: 100px;
+}
+.btn-register:hover{
+    background-color: #0084E9;
+    color: white;
+}
+.login{
+    margin-right: 20px;
+    border-bottom: 2px solid #0084E9;
 }
