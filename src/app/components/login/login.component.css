@@ -35,7 +35,7 @@ input{
     width: 270px;
     background-color: #0084E9;
     color: white;
-    margin-top: 50px;
+    margin-top: 45px;
 }
 .sign-in:hover{
     background-color: #3ea5f3;
@@ -48,10 +48,19 @@ input{
 .icon{
     background: none;
     border: 1px solid #e5ebf1;
-    width: 70px !important;
     margin-right: 10px;
 }
 .icon:hover{
     background-color: #0084E9;
     color: white;
 }
+.bouttons{
+    margin-left: 73px;
+}
+
+.example-container .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+  .fs-1{
+      font-size: 50px !important;
+  }

@@ -8,6 +8,14 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatButtonModule} from '@angular/material/button';
+import { DialogComponent } from './components/dialog/dialog.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+
 
 
 
@@ -18,6 +26,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     HouseComponent,
     NavbarComponent,
     LoginComponent,
+    DialogComponent,
     
     
   ],
@@ -27,6 +36,10 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatFormFieldModule,
+    MatDialogModule,
+    MatButtonModule,
+    BrowserAnimationsModule
 
 
   ],

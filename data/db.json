@@ -10,6 +10,7 @@
     },
     "floors":[
       {
+        "id":1,
         "number":1,
         "rooms":[
           {
@@ -73,6 +74,7 @@
         ]
       },
       {
+        "id":2,
         "number":2,
         "rooms":[
           {
