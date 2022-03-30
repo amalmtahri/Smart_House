@@ -10,6 +10,11 @@ h6{
     background-color: #F6F6F6;
     margin-bottom: 20px;
 }
+.bg{
+    background-color: #b8dcf8;
+    margin-bottom: 20px;
+
+}
 .smarthome{
     margin: 50px;
 }
@@ -31,6 +36,8 @@ background-color: #0492ff;
     height: 60px;
     color: white;
     font-size: 20px;
+    margin-right: 20px;
+
 }
 .btn-delete:hover{
     background-color: #ff6179;

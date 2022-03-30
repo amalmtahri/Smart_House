@@ -1,4 +1,4 @@
 export enum Status {
-    ON,
-    OFF
+    ON="ON",
+    OFF="OFF"
 }

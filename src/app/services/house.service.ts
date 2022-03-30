@@ -14,4 +14,12 @@ export class HouseService {
   {
     return this.http.get<House[]>(this.apiURL);
   }
+
+  delete(id: any) {
+    return this.http.delete(`${this.apiURL}/${id}`)
+  }
+
+  addHouse(house: House) {
+    return this.http.post<House>(this.apiURL, house);
+  }
 }

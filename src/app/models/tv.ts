@@ -1,2 +1,6 @@
-export interface Tv {
+import { Device } from "./device";
+
+export interface Tv extends Device{
+
+    number:number;
 }

@@ -1,7 +1,11 @@
-import { Device } from "./device";
+import { Camera } from "./camera";
+import { Lamp } from "./lamp";
+import { Tv } from "./tv";
 
 export interface Room {
     id:number;
     number:number;
-    devices: Device;
+    lamps: Lamp[];
+    tvs: Tv[],
+    cameras: Camera[];
 }
