@@ -116,7 +116,7 @@
   "devices": [
     {
       "id": 1,
-      "status": "ON",
+      "status": "OFF",
       "name": "Lamp",
       "room": {
         "id": 2,
@@ -286,27 +286,6 @@
         }
       },
       "id": 5
-    },
-    {
-      "name": "Fruits secs",
-      "id": 11
-    },
-    {
-      "name": "hhhhhhhhh",
-      "status": "ON",
-      "id": 12
-    },
-    {
-      "status": "OFF",
-      "id": 13
-    },
-    {
-      "name": "Tkiwtats",
-      "id": 14
-    },
-    {
-      "name": "Tkiwtats",
-      "id": 15
     }
   ]
 }

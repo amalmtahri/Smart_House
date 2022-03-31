@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalConstants } from 'src/app/common/global-constants';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -8,13 +9,31 @@ import { GlobalConstants } from 'src/app/common/global-constants';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  connected : boolean = GlobalConstants.connected;
+  connected : boolean = false;
 
   ngOnInit(): void {
-    this.connected
-    console.log(this.connected);
+    this.verifConnection();
+    console.log(GlobalConstants.connected);
+    console.log(GlobalConstants.userData);
+    
+  }
+
+  verifConnection()
+  {
+   if(GlobalConstants.connected === true){
+     this.connected = true;
+   }
+   else{
+    this.connected = false;
+   }
+  }
+
+  logout()
+  {
+    GlobalConstants.connected = undefined;
+    this.router.navigate(['/login']);
   }
 
 }

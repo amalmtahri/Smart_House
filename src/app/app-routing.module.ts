@@ -5,11 +5,12 @@ import { HouseComponent } from './components/smartHouse/smartHouse.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { GlobalConstants } from './common/global-constants';
+import { AuthGuard } from './auth/auth.guard';
 
 
 
 const routes: Routes = [
-  { path: 'smarthouse', component: HouseComponent, canActivate:[GlobalConstants.connected]},
+  { path: 'smarthouse', component: HouseComponent, canActivate:[AuthGuard]},
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
 ];
