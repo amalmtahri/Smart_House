@@ -8,7 +8,7 @@
                         <p class="fw-bold">Recharge Direct</p>
                     </span>
                     <div class="ctn">
-                        <span class="">
+                        <span>
                             <p>if you don't an account</p>
                             <p>you can <span class="register fw-bold">Register here !</span></p>
                         </span>
@@ -20,11 +20,11 @@
                 </div>
             </div>
             <div class="col-lg-2 formule">
-                <form action="">
-                    <input type= "text" placeholder="Enter username">
-                    <input type="text" placeholder="Password"> 
+                <form [formGroup]="formGroup" (ngSubmit)="login()">
+                    <input type= "text" placeholder="Enter username"  formControlName = "username"> 
+                    <input type="password" placeholder="Password"  formControlName="password"> 
                     <span class="pswrd">Recover Password ?</span>
-                    <button class="shadow btn sign-in">Sign in</button>
+                    <button class="shadow btn sign-in" type="submit">Sign in</button>
                 </form>
                 <div class="pt-5 text-center continue">
                     <span>Or continue with</span>

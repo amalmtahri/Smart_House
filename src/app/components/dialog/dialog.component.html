@@ -3,16 +3,43 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <h5 class="modal-title" id="exampleModalLabel"> Add Device</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          ...
+          <form  method="post">
+            <div>
+              <label for="">Name : </label>
+              <input type="text" [(ngModel)]="myNewDevice.name" class="form-control" name="name"> 
+            </div>
+            <div>
+              <label for="">Status : </label>
+              <select  class="form-control" [(ngModel)]="myNewDevice.status" name="status">
+                <option value="ON">ON</option>
+                <option value="OFF">OFF</option>
+              </select>
+            </div>
+            <div>
+              <label for="">Room : </label>
+              <select  class="form-control" [(ngModel)]="myNewDevice.room" name="room">
+                <option [ngValue]="room" *ngFor="let room of resultRooms">{{room.number}}</option>
+              </select>
+            </div>
+            <div>
+              <label for="">Floor : </label>
+              <select  class="form-control" [(ngModel)]="myNewDevice.floor" name="floor">
+                <option [ngValue]="floor" *ngFor="let floor of resultFloors">{{floor.number}}</option>
+              </select>
+            </div>
+          </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <form data-bs-dismiss="modal">
+            <button type="submit" class="btn btn-secondary" >Close</button>
+          </form>
+          <button type="button" class="btn btn-primary" (click)="addDevice()">Save changes</button>
         </div>
       </div>
     </div>
   </div>
+  

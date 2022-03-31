@@ -1,0 +1,59 @@
+<div class="">
+    
+    <div class="row smarthome ">
+        <div class="d-flex justify-content-end">
+            <!-- <button mat-raised-button (click)="openDialog()">Pick one</button> -->
+
+                    <!-- Button trigger modal -->
+        <button type="button" class="btn btn-new text-white rounded" (click)="openDialog()" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <i class="bi bi-plus-circle-fill"></i>
+        </button>
+            <!-- <button class="btn btn-new text-white rounded" (click)="openDialog()"><i class="bi bi-plus-circle-fill"></i></button> -->
+        </div>
+        <div  [ngClass]="{'bg': device.status === on , 'card': device.status === off}" class="w-100 " style="width: 18rem;"  *ngFor="let device of resultDevices">
+            <div class="card-body d-flex position-relative">
+                <div class="d-flex ">
+                    <button class="rounded-circle btn btn-start" (click)="changeStatus(device)"><i class="{{device.status === on?'bi bi-power':'bi bi-play-fill'}}"></i></button>
+                </div>
+                <div class="ms-5">
+                    <span>
+                        <p>Device: <span class="fw-bold"> {{device.name}}</span> </p>
+                        <p>Room: <span class="fw-bold">{{device.room?.number}}</span> </p>
+                        <p>Floor: <span class="fw-bold">{{device.room?.floor?.number}}</span> </p>
+                        <p>Status: <span class="fw-bold">{{device.status}}</span></p>
+                    </span>
+                </div>
+                <div class="position-absolute top-0 end-0">
+                    <button class="btn btn-delete rounded-circle mt-4" (click)="confirmBox(device)"><i class="bi bi-x-circle-fill"></i> </button>
+                </div>
+                <a class="position-absolute bottom-0 end-0 " href="">
+                    <span class="fs-5">More Info</span><i class="bi bi-arrow-right-circle-fill ps-2"></i>
+                </a>
+            </div>
+        </div>
+    
+        <!-- <div class="card w-100" style="width: 18rem;">
+            <div class="card-body d-flex position-relative">
+                
+                <div class="d-flex ">
+                    <button class="rounded-circle btn btn-off"><i class="bi bi-power"></i></button>
+                </div>
+                <div class="ms-5">
+                    <span>
+                        <p>Device: <span class="fw-bold">TV</span> </p>
+                        <p>Room: <span class="fw-bold">Linving room</span> </p>
+                        <p>Floor: <span class="fw-bold">Floor 2</span> </p>
+                        <p>Status: <span class="fw-bold">OFF</span> </p>
+                    </span>
+                </div>
+                <div class="position-absolute top-0 end-0">
+                    <button class="btn btn-delete rounded-circle mt-4"><i class="bi bi-x-circle-fill"></i> </button>
+                </div>
+                <a class="position-absolute bottom-0 end-0 " href="">
+                    <span class="fs-5">More Info</span><i class="bi bi-arrow-right-circle-fill ps-2"></i>
+                </a>
+            </div>
+        </div> -->
+    </div>
+</div>
+

@@ -5,21 +5,26 @@ import { HouseService } from 'src/app/services/house.service';
 import { DialogComponent } from '../dialog/dialog.component'; 
 import Swal from 'sweetalert2';
 import { Status } from 'src/app/enums/status';
+import { DeviceService } from 'src/app/services/device.service';
+import { Device } from 'src/app/models/device';
 
 
 
 @Component({
   selector: 'app-house',
-  templateUrl: './house.component.html',
-  styleUrls: ['./house.component.css']
+  templateUrl: './smartHouse.component.html',
+  styleUrls: ['./smartHouse.component.css']
 })
 export class HouseComponent implements OnInit {
-  houses: House[] = [];
-  resultHouses: House[] = [];
+  devices: Device[] = [];
+  resultDevices: Device[] = [];
   on : Status = Status.ON;
   off : Status = Status.OFF;
 
-  constructor(public dialog: MatDialog, private houseService: HouseService) { }
+
+ 
+
+  constructor(public dialog: MatDialog, private deviceService: DeviceService) { }
 
   ngOnInit(): void {
     this.getAll();
@@ -30,7 +35,25 @@ export class HouseComponent implements OnInit {
     });
   }
 
-  confirmBox(house: House) {
+  changeStatus(device: Device){
+    console.log(device);
+    if(device.status === this.on){
+      device.status = Status.OFF;
+      this.deviceService.updateDevice(device)
+      .subscribe((Response:Device)=>{
+       this.getAll();
+      })
+    }
+    else{
+      device.status = Status.ON;
+      this.deviceService.updateDevice(device)
+      .subscribe((Response:Device)=>{
+       this.getAll();
+      })
+    }
+  }
+
+  confirmBox(device: Device) {
     Swal.fire({
       title: 'Are you sure want to remove?',
       icon: 'info',
@@ -44,11 +67,10 @@ export class HouseComponent implements OnInit {
           'Your imaginary file has been deleted.',
           'success'
         )
-        this.deleteHouse(house.id);
+        this.deleteHouse(device.id);
       } else if (result.dismiss === Swal.DismissReason.cancel) {
         Swal.fire(
           'Cancelled',
-         
         )
       }
     })
@@ -58,14 +80,14 @@ export class HouseComponent implements OnInit {
 
   getAll()
   {
-    this.houseService.getAll().subscribe(data => this.resultHouses = this.houses = data );
-    console.log(this.resultHouses);
+    this.deviceService.getAll().subscribe(data => this.resultDevices = this.devices = data );
+    console.log(this.resultDevices);
   }
 
   deleteHouse(id:any)
   {
-    this.houseService.delete(id).subscribe(() => 
-    this.resultHouses = this.houses = this.houses.filter(data => data.id != id));
+    this.deviceService.delete(id).subscribe(() => 
+    this.resultDevices = this.devices = this.devices.filter(data => data.id != id));
   }
 
   // addHouse() {

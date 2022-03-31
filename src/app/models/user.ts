@@ -1,5 +1,8 @@
+import { House } from "./house";
+
 export interface User {
-    id:number;
-    userName:string;
+    id?:number;
+    username:string;
     password:string;
+    house?: House[];
 }

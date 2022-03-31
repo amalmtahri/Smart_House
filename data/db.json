@@ -1,124 +1,312 @@
 {
-  "house":[
+  "users": [
     {
-      "id":1,
-      "name":"FamilyHouse",
-      "address":"X street address",
-      "user":{
-        "id":1,
-        "userName":"username",
-        "password":"password"
+      "id": 1,
+      "username": "amalmtahri",
+      "password": "amal"
+    },
+    {
+      "id": 2,
+      "username": "soumiakabrane",
+      "password": "soumia"
+    }
+  ],
+  "houses": [
+    {
+      "id": 1,
+      "name": "home 1",
+      "address": "saada",
+      "user": {
+        "id": 1,
+        "username": "amalmtahri",
+        "password": "amal"
       },
-      "floors":[
-        {
-          "number":1,
-          "rooms":[
-            {
-              "id":1,
-              "number":1,
-              "lamps":[
-                {
-                "id":1,
-                "status":"ON",
-                "number":1
-                }
-              ],
-              "tvs":[
-                {
-                "id":1,
-                "status":"ON",
-                "number":1
-                }
-              ],
-              "cameras":[
-                {
-                  "id":1,
-                  "status":"ON",
-                  "number":1
-                }
-              ]
-            },
-            {
-              "id":2,
-              "number":2,
-              "lamps":[
-                {
-                "id":2,
-                "status":"ON",
-                "number":2
-                }
-              ],
-              "tvs":[
-                {
-                "id":2,
-                "status":"ON",
-                "number":2
-                }
-              ],
-              "cameras":[
-                {
-                  "id":3,
-                  "status":"ON",
-                  "number":3
-                }
-              ]
-            }
-        ]},
-        {
-          "number":2,
-          "rooms":[
-            {
-              "id":3,
-              "number":3,
-              "lamps":[
-                {
-                "id":3,
-                "status":"ON",
-                "number":3
-                }
-              ],
-              "tvs":[
-                {
-                "id":3,
-                "status":"ON",
-                "number":3
-                }
-              ],
-              "cameras":[
-                {
-                  "id":3,
-                  "status":"ON",
-                  "number":3
-                }
-              ]
-            },
-            {
-              "id":4,
-              "number":4,
-              "lamps":[
-                {
-                "id":5,
-                "status":"ON",
-                "number":5
-                }
-              ],
-              "tvs":[
-                {
-                "id":5,
-                "status":"OFF",
-                "number":5
-                }
-              ],
-              "cameras":[
-                {
-                  "id":5,
-                  "status":"OFF",
-                  "number":5
-                }
-              ]
-            }
-          ]
+      "floor": []
+    },
+    {
+      "id": 2,
+      "name": "home 2",
+      "address": "saada",
+      "user": {
+        "id": 1,
+        "username": "amalmtahri",
+        "password": "amal"
+      },
+      "floor": []
+    }
+  ],
+  "floors": [
+    {
+      "id": 1,
+      "number": 1,
+      "rooms": [],
+      "house": {
+        "id": 1,
+        "name": "home 1",
+        "address": "saada",
+        "user": {
+          "id": 1,
+          "username": "amalmtahri",
+          "password": "amal"
+        },
+        "floor": []
+      }
+    },
+    {
+      "id": 2,
+      "number": 2,
+      "rooms": [],
+      "house": {
+        "id": 1,
+        "name": "home 1",
+        "address": "saada",
+        "user": {
+          "id": 1,
+          "username": "amalmtahri",
+          "password": "amal"
+        },
+        "floor": []
+      }
+    }
+  ],
+  "rooms": [
+    {
+      "id": 1,
+      "number": 1,
+      "floor": {
+        "id": 1,
+        "number": 1,
+        "rooms": [],
+        "house": {
+          "id": 1,
+          "name": "home 1",
+          "address": "saada",
+          "user": {
+            "id": 1,
+            "username": "amalmtahri",
+            "password": "amal"
+          },
+          "floor": []
         }
-      ]
-    }]
+      },
+      "devices": []
+    },
+    {
+      "id": 2,
+      "number": 2,
+      "floor": {
+        "id": 1,
+        "number": 1,
+        "rooms": [],
+        "house": {
+          "id": 1,
+          "name": "home 1",
+          "address": "saada",
+          "user": {
+            "id": 1,
+            "username": "amalmtahri",
+            "password": "amal"
+          },
+          "floor": []
+        }
+      },
+      "devices": []
+    }
+  ],
+  "devices": [
+    {
+      "id": 1,
+      "status": "ON",
+      "name": "Lamp",
+      "room": {
+        "id": 2,
+        "number": 2,
+        "floor": {
+          "id": 1,
+          "number": 1,
+          "rooms": [],
+          "house": {
+            "id": 1,
+            "name": "home 1",
+            "address": "saada",
+            "user": {
+              "id": 1,
+              "username": "amalmtahri",
+              "password": "amal"
+            },
+            "floor": []
+          }
+        },
+        "devices": []
+      },
+      "floor": {
+        "id": 1,
+        "number": 1,
+        "rooms": [],
+        "house": {
+          "id": 1,
+          "name": "home 1",
+          "address": "saada",
+          "user": {
+            "id": 1,
+            "username": "amalmtahri",
+            "password": "amal"
+          },
+          "floor": []
+        }
+      }
+    },
+    {
+      "id": 2,
+      "status": "OFF",
+      "name": "tv",
+      "room": {
+        "id": 2,
+        "number": 2,
+        "floor": {
+          "id": 1,
+          "number": 1,
+          "rooms": [],
+          "house": {
+            "id": 1,
+            "name": "home 1",
+            "address": "saada",
+            "user": {
+              "id": 1,
+              "username": "amalmtahri",
+              "password": "amal"
+            },
+            "floor": []
+          }
+        },
+        "devices": []
+      },
+      "floor": {
+        "id": 1,
+        "number": 1,
+        "rooms": [],
+        "house": {
+          "id": 1,
+          "name": "home 1",
+          "address": "saada",
+          "user": {
+            "id": 1,
+            "username": "amalmtahri",
+            "password": "amal"
+          },
+          "floor": []
+        }
+      }
+    },
+    {
+      "name": "cam",
+      "status": "ON",
+      "id": 3
+    },
+    {
+      "name": "TV",
+      "status": "OFF",
+      "room": {
+        "id": 1,
+        "number": 1,
+        "floor": {
+          "id": 1,
+          "number": 1,
+          "rooms": [],
+          "house": {
+            "id": 1,
+            "name": "home 1",
+            "address": "saada",
+            "user": {
+              "id": 1,
+              "username": "amalmtahri",
+              "password": "amal"
+            },
+            "floor": []
+          }
+        },
+        "devices": []
+      },
+      "floor": {
+        "id": 1,
+        "number": 1,
+        "rooms": [],
+        "house": {
+          "id": 1,
+          "name": "home 1",
+          "address": "saada",
+          "user": {
+            "id": 1,
+            "username": "amalmtahri",
+            "password": "amal"
+          },
+          "floor": []
+        }
+      },
+      "id": 4
+    },
+    {
+      "name": "eezr",
+      "status": "ON",
+      "room": {
+        "id": 2,
+        "number": 2,
+        "floor": {
+          "id": 1,
+          "number": 1,
+          "rooms": [],
+          "house": {
+            "id": 1,
+            "name": "home 1",
+            "address": "saada",
+            "user": {
+              "id": 1,
+              "username": "amalmtahri",
+              "password": "amal"
+            },
+            "floor": []
+          }
+        },
+        "devices": []
+      },
+      "floor": {
+        "id": 2,
+        "number": 2,
+        "rooms": [],
+        "house": {
+          "id": 1,
+          "name": "home 1",
+          "address": "saada",
+          "user": {
+            "id": 1,
+            "username": "amalmtahri",
+            "password": "amal"
+          },
+          "floor": []
+        }
+      },
+      "id": 5
+    },
+    {
+      "name": "Fruits secs",
+      "id": 11
+    },
+    {
+      "name": "hhhhhhhhh",
+      "status": "ON",
+      "id": 12
+    },
+    {
+      "status": "OFF",
+      "id": 13
+    },
+    {
+      "name": "Tkiwtats",
+      "id": 14
+    },
+    {
+      "name": "Tkiwtats",
+      "id": 15
+    }
+  ]
 }

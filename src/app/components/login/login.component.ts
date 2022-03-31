@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import {HttpClientModule ,HttpClient} from '@angular/common/http';
+import { FormControl,FormGroup, Validators } from '@angular/forms';
+import { LoginService } from 'src/app/services/login.service';
+import { User } from 'src/app/models/user';
+import { GlobalConstants } from 'src/app/common/global-constants';
 
 @Component({
   selector: 'app-login',
@@ -9,33 +11,38 @@ import {HttpClientModule ,HttpClient} from '@angular/common/http';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  public loginForm!: FormGroup
-  constructor(private formBuilder : FormBuilder, private http : HttpClient, private router: Router) { }
+  constructor(private loginService: LoginService,  private router: Router) { }
 
   ngOnInit(): void {
-    this.formBuilder.group({
-      userName:[''],
-      password:['']
-    })
+   
   }
-  login(){
-    this.http.get<any>("http://localhost:3000/house")
-    .subscribe(res=>{
-      const user = res.find((a:any)=>{
-        return a.userName === this.loginForm.value.userName && a.password === this.loginForm.value.password
-      });
-      if(user){
-        alert("Login Success");
-        this.loginForm.reset();
-        this.router.navigate(['smarthouse'])
-      }else{
-        alert("user not found")
-      }
-    },err=>{
-      alert("Something went wrong!!")
-    }
-    )
-  }
+  formGroup = new FormGroup(
+    {
+      username : new FormControl('',Validators.required),
+      password : new FormControl ('',Validators.required),
 
+    }
+  )
+
+
+  login(){
+    const user = this.formGroup.value;
+
+    if (user.username && user.password) {
+        this.loginService.login({"username":this.formGroup.value, "password":user.password})
+            .subscribe(
+                (rs:User[]) => {
+                  if(rs.length>0){
+                    alert("login success");
+                    GlobalConstants.userData = rs[0];
+                    GlobalConstants.connected = true;
+                    this.router.navigate(['/smarthouse']);
+                  }else{
+                    alert("error login")
+                    this.formGroup.reset();
+                  }
+                }
+            );
+    }
+  }
 }
