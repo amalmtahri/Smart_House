@@ -58,8 +58,8 @@ export class HouseComponent implements OnInit {
       title: 'Are you sure want to remove?',
       icon: 'info',
       showCancelButton: true,
-      confirmButtonText: '<i class="fa fa-thumbs-up"></i> Great!',
-      cancelButtonText: '<i class="fa fa-thumbs-down"></i>'
+      confirmButtonText: '<i class="fa fa-thumbs-up"></i> Yes!',
+      cancelButtonText: '<i class="fa fa-thumbs-down"></i> No'
     }).then((result:any) => {
       if (result.value) {
         Swal.fire(
