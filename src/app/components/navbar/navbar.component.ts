@@ -22,7 +22,7 @@ export class NavbarComponent implements OnInit {
 
   verifConnection()
   {
-   if(GlobalConstants.connected === true){
+   if(GlobalConstants.connected){
      this.connected = true;
    }
    else{
@@ -32,7 +32,7 @@ export class NavbarComponent implements OnInit {
 
   logout()
   {
-    GlobalConstants.connected = undefined;
+    GlobalConstants.connected = false;
     this.router.navigate(['/login']);
   }
 
