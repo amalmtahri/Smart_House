@@ -1,5 +1,9 @@
 # SmartHouse
 
+<img src="smartHouse/home.png">
+<img src="smartHouse/smartHouse.png">
+<img src="smartHouse/login.png">
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
 ## Development server
