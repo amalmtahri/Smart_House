@@ -33,10 +33,10 @@ export class LoginComponent implements OnInit {
             .subscribe(
                 (rs:User[]) => {
                   if(rs.length>0){
-                    alert("login success");
+                    alert("login success ✔️");
                     GlobalConstants.userData = rs[0];
                     GlobalConstants.connected = true;
-                    this.router.navigate(['/smarthouse']);
+                    this.router.navigate(['/home']);
                   }else{
                     alert("error login")
                     this.formGroup.reset();

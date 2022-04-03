@@ -17,7 +17,7 @@ import { Device } from 'src/app/models/device';
 })
 export class HouseComponent implements OnInit {
   devices: Device[] = [];
-  resultDevices: Device[] = [];
+  // resultDevices: Device[] = [];
   on : Status = Status.ON;
   off : Status = Status.OFF;
 
@@ -31,7 +31,7 @@ export class HouseComponent implements OnInit {
   }
   openDialog(): void {
    this.dialog.open(DialogComponent, {
-      width: '30%',
+     
     });
   }
 
@@ -80,14 +80,14 @@ export class HouseComponent implements OnInit {
 
   getAll()
   {
-    this.deviceService.getAll().subscribe(data => this.resultDevices = this.devices = data );
-    console.log(this.resultDevices);
+    this.deviceService.getAll().subscribe(data => this.devices =  data );
+    console.log(this.devices);
   }
 
   deleteHouse(id:any)
   {
     this.deviceService.delete(id).subscribe(() => 
-    this.resultDevices = this.devices = this.devices.filter(data => data.id != id));
+    this.devices  = this.devices.filter(data => data.id != id));
   }
 
   // addHouse() {

@@ -15,11 +15,11 @@ import { RoomService } from 'src/app/services/room.service';
 export class DialogComponent implements OnInit {
 
   floors: Floor[] = [];
-  resultFloors: Floor[] = [];
+  // resultFloors: Floor[] = [];
   close : boolean = false;
 
   rooms: Room[] = [];
-  resultRooms: Room[] = [];
+  // resultRooms: Room[] = [];
 
   myNewDevice: Device={
 
@@ -45,16 +45,16 @@ export class DialogComponent implements OnInit {
 
 getAllFloors()
 {
-  this.roomService.getAll().subscribe(data => this.resultRooms = this.rooms = data );
-  console.log(this.resultRooms);
+  this.roomService.getAll().subscribe(data => this.rooms = data );
+  console.log(this.rooms);
 
 }
 
 
 getAllRooms()
 {
-  this.floorService.getAll().subscribe(data => this.resultFloors = this.floors = data );
-  console.log(this.resultFloors);
+  this.floorService.getAll().subscribe(data => this.floors = data );
+  console.log(this.floors);
 }
 
 clearInput(){

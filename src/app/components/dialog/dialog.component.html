@@ -22,13 +22,13 @@
             <div>
               <label for="">Room : </label>
               <select  class="form-control" [(ngModel)]="myNewDevice.room" name="room">
-                <option [ngValue]="room" *ngFor="let room of resultRooms">{{room.number}}</option>
+                <option [ngValue]="room" *ngFor="let room of rooms">{{room.number}}</option>
               </select>
             </div>
             <div>
               <label for="">Floor : </label>
               <select  class="form-control" [(ngModel)]="myNewDevice.floor" name="floor">
-                <option [ngValue]="floor" *ngFor="let floor of resultFloors">{{floor.number}}</option>
+                <option [ngValue]="floor" *ngFor="let floor of floors">{{floor.number}}</option>
               </select>
             </div>
           </form>
