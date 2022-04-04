@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { FormControl,FormGroup, Validators } from '@angular/forms';
 import { LoginService } from 'src/app/services/login.service';
 import { User } from 'src/app/models/user';
-import { GlobalConstants } from 'src/app/common/global-constants';
 
 @Component({
   selector: 'app-login',
@@ -34,8 +33,6 @@ export class LoginComponent implements OnInit {
                 (rs:User[]) => {
                   if(rs.length>0){
                     alert("login success ✔️");
-                    GlobalConstants.userData = rs[0];
-                    GlobalConstants.connected = true;
                     this.router.navigate(['/home']);
                   }else{
                     alert("error login")

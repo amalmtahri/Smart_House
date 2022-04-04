@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DoCheck, OnInit } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { House } from 'src/app/models/house';
 import { HouseService } from 'src/app/services/house.service';
@@ -15,7 +15,7 @@ import { Device } from 'src/app/models/device';
   templateUrl: './smartHouse.component.html',
   styleUrls: ['./smartHouse.component.css']
 })
-export class HouseComponent implements OnInit {
+export class HouseComponent implements OnInit, DoCheck {
   devices: Device[] = [];
   // resultDevices: Device[] = [];
   on : Status = Status.ON;
@@ -29,6 +29,11 @@ export class HouseComponent implements OnInit {
   ngOnInit(): void {
     this.getAll();
   }
+
+  ngDoCheck(): void {
+    this.getAll();
+  }
+  
   openDialog(): void {
    this.dialog.open(DialogComponent, {
      

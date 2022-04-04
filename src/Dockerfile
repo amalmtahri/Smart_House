@@ -9,3 +9,4 @@ FROM nginx:latest
 COPY --from=node /app/dist/smart_house /usr/share/nginx/html
 
 
+
