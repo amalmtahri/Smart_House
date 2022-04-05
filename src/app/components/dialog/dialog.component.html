@@ -31,13 +31,14 @@
                 <option [ngValue]="floor" *ngFor="let floor of floors">{{floor.number}}</option>
               </select>
             </div>
-          </form>
+         
         </div>
         <div class="modal-footer">
           <form data-bs-dismiss="modal">
             <button type="submit" class="btn btn-secondary" >Close</button>
           </form>
           <button type="button" class="btn btn-primary" (click)="addDevice()">Save</button>
+        </form>
         </div>
       </div>
     </div>
