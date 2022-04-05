@@ -3,7 +3,7 @@
 <img src="smartHouse/home.png">
 <img src="smartHouse/smartHouse.png">
 <img src="smartHouse/login.png">
-<img src="smartHouse/diagramClass.png">
+<img src="smartHouse/diagramClass.jpg">
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
